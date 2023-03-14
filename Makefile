@@ -53,9 +53,10 @@ install: st
 	@echo Please see the README file regarding the terminfo entry of st.
 
 nix:
-	rm -f config.h
 	make clean
-	nix build
+	rm -f config.h
+	make
+	nix-build
 
 uninstall:
 	rm -f $(DESTDIR)$(PREFIX)/bin/st
